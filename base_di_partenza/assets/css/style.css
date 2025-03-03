@@ -336,3 +336,41 @@ footer{
     font-size: 1.3em;
 }
 }
+
+
+@media print {
+    
+    body, html {
+      margin: 0;
+      padding: 0;
+    }
+  
+    
+    header, footer, nav, #pccards, #container-iframe, section .h2special, section form , section p {
+        display: none; 
+      }
+  
+   
+    main {
+      width: 100%;
+      padding: 10mm;
+    }
+  
+
+    p, ul, ol, table {
+      page-break-inside: avoid;
+    }
+  
+    
+    #table-container {
+      page-break-before: always; 
+      margin-top: 20mm; 
+    }
+  
+    
+    footer {
+      position: absolute;
+      bottom: 10mm;
+      width: 100%;
+    }
+  }
